@@ -1,5 +1,4 @@
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
-// let ingredientList;
 const list = document.querySelector('#ingredients');
 
 ingredients.forEach((ingredient) => {
