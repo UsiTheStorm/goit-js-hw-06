@@ -5,13 +5,13 @@ function capitalizeName(name) {
     return name[0].toUpperCase() + name.slice(1).toLowerCase();
 }
 
-function onInputChange(event) {
-    const inputValue = event.currentTarget.value;
-    if (inputValue === '') {
+function changeName(evt) {
+    const inputValue = evt.currentTarget.value;
+    if (!inputValue) {
         output.textContent = 'Anonymous';
     } else {
         output.textContent = capitalizeName(inputValue);
     }
 }
 
-input.addEventListener('input', onInputChange);
+input.addEventListener('input', changeName);
