@@ -1,18 +1,19 @@
 const form = document.querySelector('.login-form');
 
-function submitForm(event) {
+function handleFormSubmission(event) {
     event.preventDefault();
 
     const { email, password } = event.currentTarget.elements;
     if (!email.value || !password.value) {
-        alert('Complete All Fields');
+        // eslint-disable-next-line no-alert
+        alert('Please fill out all fields');
     } else {
-        const data = {
+        const formData = {
             email: email.value,
             password: password.value,
         };
-        console.log(data);
+        console.log(formData);
         event.currentTarget.reset();
     }
 }
-form.addEventListener('submit', submitForm);
+form.addEventListener('submit', handleFormSubmission);
