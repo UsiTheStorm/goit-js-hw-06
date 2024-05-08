@@ -4,14 +4,13 @@ const decrementBtn = document.querySelector('#decrement');
 
 let counterValue = 0;
 
-function onIncrementBtnClick() {
+function plus() {
     counterValue += 1;
     value.textContent = counterValue;
 }
-incrementBtn.addEventListener('click', onIncrementBtnClick);
-
-function onDecrementBtnClick() {
+function minus() {
     counterValue -= 1;
     value.textContent = counterValue;
 }
-decrementBtn.addEventListener('click', onDecrementBtnClick);
+incrementBtn.addEventListener('click', plus);
+decrementBtn.addEventListener('click', minus);
