@@ -12,6 +12,7 @@ function submitForm(event) {
             password: password.value,
         };
         console.log(data);
+        event.currentTarget.reset();
     }
 }
 form.addEventListener('submit', submitForm);
