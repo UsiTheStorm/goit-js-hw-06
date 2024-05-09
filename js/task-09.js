@@ -1,5 +1,6 @@
 const btn = document.querySelector('.change-color');
 const body = document.querySelector('body');
+const colorName = document.querySelector('.color');
 
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215)
@@ -8,7 +9,9 @@ function getRandomHexColor() {
 }
 
 function changeColor() {
-    body.style.backgroundColor = getRandomHexColor();
+    const color = getRandomHexColor();
+    body.style.backgroundColor = color;
+    colorName.innerHTML = color;
 }
 
 btn.addEventListener('click', changeColor);
