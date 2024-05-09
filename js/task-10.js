@@ -13,7 +13,7 @@ function createBoxes() {
     const numberOfBoxes = input.value;
     const boxes = [];
 
-    for (let i = 0; i < numberOfBoxes; i++) {
+    for (let i = 0; i < numberOfBoxes; i += 1) {
         const box = document.createElement('div');
         const size = 30 + 10 * i;
 
