@@ -10,19 +10,20 @@ function getRandomHexColor() {
 }
 
 function createBoxes() {
-    const amount = input.value;
-    const divs = [];
-    console.dir(input);
-    for (let i = 0; i < amount; i += 1) {
+    const numberOfBoxes = input.value;
+    const boxes = [];
+
+    for (let i = 0; i < numberOfBoxes; i++) {
         const box = document.createElement('div');
-        box.style.width = `${30 + 10 * i}px`;
-        box.style.height = `${30 + 10 * i}px`;
+        const size = 30 + 10 * i;
+
+        box.style.width = `${size}px`;
+        box.style.height = `${size}px`;
         box.style.backgroundColor = getRandomHexColor();
-        console.log(box);
-        divs.push(box);
+        boxes.push(box);
     }
-    boxSpace.append(...divs);
-    // console.log(divs);
+
+    boxSpace.append(...boxes);
 }
 
 function destroyBoxes() {
